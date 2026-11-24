@@ -1,13 +1,43 @@
+# Dependencies
 node_modules/
+
+# Build and runtime outputs
+dist/
 .wrangler/
 coverage/
-.dev.vars
-.env
-.DS_Store
-*.log
+*.lcov
 worker-configuration.d.ts
 
-# Generated from src/ by scripts/build-assets.mjs (npm run generate), so they
-# cannot drift from their source.
+# Generated from src/ by scripts/build-assets.mjs (npm run generate)
 public/js/shared/
 public/_headers
+
+# Local environment and secrets
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env
+.env.*
+!.env.example
+
+design/
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+tmp/
+temp/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

@@ -101,7 +101,6 @@ textarea:hover {
   margin: 0.35rem 0 0;
   color: var(--error);
   font-weight: 600;
-  font-size: 0.95rem;
 }
 .field-error:empty {
   display: none;
