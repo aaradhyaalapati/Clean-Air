@@ -89,6 +89,12 @@
   background: var(--surface-2);
   border-radius: 8px;
 }
+.totals > div {
+  border-top: 3px solid var(--accent);
+}
+.totals > div dd {
+  color: var(--accent);
+}
 dt {
   color: var(--ink-soft);
   font-size: 1.0625rem;
@@ -117,6 +123,9 @@ td {
   text-align: left;
   padding: 0.4rem 0.5rem;
   border-bottom: 1px solid var(--field-border);
+}
+td {
+  text-align: right;
 }
 
 .notice {
@@ -150,8 +159,13 @@ td {
 .rec__impact {
   padding: 0.6rem 0.8rem;
   background: var(--surface-2);
+  border-left: 3px solid var(--accent);
   border-radius: 8px;
   font-weight: 600;
+}
+.rec__ai {
+  color: var(--ink-soft);
+  font-style: italic;
 }
 .rec__calc {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -172,6 +186,9 @@ td {
   align-items: center;
   min-height: var(--target);
   font-weight: 600;
+}
+.rec__remind:hover {
+  color: var(--accent-strong);
 }
 
 @media print {

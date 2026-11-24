@@ -1,6 +1,6 @@
-# clean air
+# Clean Air
 
-**clean air** ("clean breath") is a GenAI-powered assistant that helps families
+**Clean Air** is a GenAI-powered assistant that helps families
 and communities live through severe winter smog. You tell it where you live and
 how you live; it reads the live air for your city, builds a plan of low-emission
 daily routines, indoor air quality hacks and sustainable alternatives, and shows

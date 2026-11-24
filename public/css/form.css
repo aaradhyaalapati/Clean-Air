@@ -1,20 +1,21 @@
 /* The profile form: fields, choices, and how errors are shown. */
 fieldset {
   margin: 1.5rem 0;
-  padding: 1rem 1.25rem 0.5rem;
+  padding: 1.15rem 1.25rem 0.75rem;
   background: var(--surface-1);
   border: 1px solid var(--field-border);
   border-radius: var(--radius);
   min-width: 0;
 }
 legend {
-  padding: 0 0.4rem;
+  padding: 0 0.5rem;
   font-weight: 700;
   font-size: 1.125rem;
+  color: var(--ink);
 }
 
 .field {
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
   min-width: 0;
 }
 .field-row {
@@ -26,7 +27,7 @@ legend {
 label {
   display: block;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
 input[type='text'],
@@ -36,7 +37,7 @@ textarea {
   display: block;
   width: 100%;
   min-height: var(--target);
-  padding: 0.6rem 0.75rem;
+  padding: 0.65rem 0.85rem;
   background: var(--surface-1);
   color: var(--ink);
   border: 2px solid var(--field-border);
@@ -55,7 +56,7 @@ textarea:hover {
 
 .choices {
   display: grid;
-  gap: 0.25rem;
+  gap: 0.4rem;
   margin-bottom: 0.75rem;
 }
 .choice {
@@ -64,8 +65,13 @@ textarea:hover {
   gap: 0.75rem;
   min-height: var(--target);
   margin-bottom: 0.5rem;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+}
+.choice:hover {
+  background: var(--surface-2);
 }
 .choice input {
   flex: none;
@@ -74,29 +80,43 @@ textarea:hover {
   margin: 0;
   accent-color: var(--accent);
 }
+.choice:has(input[type='radio']) {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--field-border);
+  background: var(--surface-2);
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+}
+.choice:has(input[type='radio']:checked) {
+  border: 2px solid var(--accent);
+  background: var(--surface-1);
+  font-weight: 600;
+}
 
 [aria-invalid='true'] {
   border-color: var(--error);
   border-width: 3px;
 }
 .field-error {
-  margin: 0.3rem 0 0;
+  margin: 0.35rem 0 0;
   color: var(--error);
   font-weight: 600;
+  font-size: 0.95rem;
 }
 .field-error:empty {
   display: none;
 }
 
 .error-summary {
-  margin: 1rem 0;
-  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  padding: 1.15rem 1.25rem;
   background: var(--error-bg);
   border: 3px solid var(--error);
   border-radius: var(--radius);
 }
 .error-summary h3 {
   margin-top: 0;
+  color: var(--error);
 }
 .error-summary a {
   display: inline-flex;
